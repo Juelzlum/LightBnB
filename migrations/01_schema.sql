@@ -29,8 +29,7 @@ CREATE TABLE property_reviews(
 
 CREATE TABLE properties ( 
   id  SERIAL PRIMARY KEY,
-  owner_id   guest_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-
+  owner_id  INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   title VARCHAR(255) NOT NULL,
   description TEXT, 
   thumbnail_photo_url VARCHAR(255) NOT NULL, 
